@@ -3,7 +3,7 @@
 
 // check if the user is already logged in
 if (isset($_SESSION['username'])) {
-  header("location: http://localhost/Bloodbank/Backend/bloodbankuserpage.html");
+  header("location: http://localhost/Bloodbank/Backend/bloodbankuserpage.php");
   exit;
 }
 
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $_SESSION["role"] = "bank";
             $_SESSION["loggedin"] = true;
 
-            header("location: http://localhost/Bloodbank/Backend/bloodbankuserpage.html");
+            header("location: http://localhost/Bloodbank/Backend/bloodbankuserpage.php");
           } else {
             echo "<script>alert('Invalid username or password, try again')</script>";
           }
@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="w-full max-w-md space-y-8">
           <div>
-            <a href="../index.html"><img class="mx-auto h-12 w-auto" src="../Photos/health-care.png" alt="logo"></a>
+            <a href="../index.php"><img class="mx-auto h-12 w-auto" src="../Photos/health-care.png" alt="logo"></a>
             <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Blood Bank Admin Sign in Account
             </h2>
             <p class="mt-2 text-center text-sm text-gray-600">

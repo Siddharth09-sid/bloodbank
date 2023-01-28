@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         alert("Registration unsuccessfull!");
                     </script>';
     }
-    header("location: http://localhost/Bloodbank/Backend/bloodbankuserpage.html");
+    header("location: http://localhost/Bloodbank/Backend/bloodbankuserpage.php");
 }
 
 ?>
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <div class="px-6 pt-6 lg:px-8">
             <nav class="flex items-center justify-between" aria-label="Global">
                 <div class="flex lg:flex-1">
-                    <a href="./index.html" class="-m-1.5 p-1.5">
+                    <a href="./index.php" class="-m-1.5 p-1.5">
                         <span class="sr-only">Blood</span>
                         <img class="h-8" src="Photos/health-care.png" alt="">
                     </a>

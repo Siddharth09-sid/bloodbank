@@ -6,7 +6,7 @@ if (
     $_SESSION["role"] != "admin"
 ) {
     echo '<script>alert("User not Authorized");</script>';
-    header("location: http://localhost/Bloodbank/Backend/userpage.html");
+    header("location: http://localhost/Bloodbank/Backend/userpage.php");
 }
 
 
@@ -65,7 +65,7 @@ if ($insert) {
         <div class="px-6 pt-6 lg:px-8">
             <nav class="flex items-center justify-between" aria-label="Global">
                 <div class="flex lg:flex-1">
-                    <a href="./index.html" class="-m-1.5 p-1.5">
+                    <a href="./index.php" class="-m-1.5 p-1.5">
                         <span class="sr-only">Blood</span>
                         <img class="h-8" src="../Bloodbank/Photos/health-care.png" alt="">
                     </a>

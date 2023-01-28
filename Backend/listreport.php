@@ -8,7 +8,7 @@ if (
     !isset($_SESSION["aadhar"])
 ) {
     echo '<script>alert("User not Authorized");</script>';
-    header("location: http://localhost/Bloodbank/Backend/userpage.html");
+    header("location: http://localhost/Bloodbank/Backend/userpage.php");
 }
 
 include("connect.php");
@@ -61,7 +61,7 @@ if ($res) {
         $tablestring += "</tbody></table>";
     } else {
         echo "<script>alert('User not authorized')</script>";
-        header("location: http://localhost/Bloodbank/Backend/userpage.html");
+        header("location: http://localhost/Bloodbank/Backend/userpage.php");
     }
 } else {
     echo "<script>alert('Invalid username or password, try again')</script>";

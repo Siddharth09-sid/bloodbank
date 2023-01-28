@@ -3,7 +3,7 @@
 
 // check if the user is already logged in
 if (isset($_SESSION['phone'])) {
-    header("location: http://localhost/Bloodbank/Backend/userpage.html");
+    header("location: http://localhost/Bloodbank/Backend/userpage.php");
     exit;
 }
 
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         $_SESSION["loggedin"] = true;
                         $_SESSION["aadhar"] = $row["aadhar"];
 
-                        header("location: http://localhost/Bloodbank/Backend/userpage.html");
+                        header("location: http://localhost/Bloodbank/Backend/userpage.php");
                     } else {
                         echo "<script>alert('Invalid username or password, try again')</script>";
                     }
@@ -131,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <div class="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div class="w-full max-w-md space-y-8">
                     <div>
-                        <a href="../index.html"><img class="mx-auto h-12 w-auto" src="../Photos/health-care.png" alt="logo"></a>
+                        <a href="../index.php"><img class="mx-auto h-12 w-auto" src="../Photos/health-care.png" alt="logo"></a>
                         <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign in to your
                             account
                         </h2>
@@ -159,7 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                 <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
                             </div>
                             <div class="text-sm">
-                                <a href="./signup.html" class="font-medium text-red-600 hover:text-red-500">Register</a>
+                                <a href="./signup.php" class="font-medium text-red-600 hover:text-red-500">Register</a>
 
                             </div>
                             <div class="text-sm">
