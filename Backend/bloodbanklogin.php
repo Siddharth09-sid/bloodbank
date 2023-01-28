@@ -3,7 +3,7 @@
 
 // check if the user is already logged in
 if (isset($_SESSION['username'])) {
-  header("location: http://localhost/Bloodbank/Backend/welcomeuser.php");
+  header("location: http://localhost/Bloodbank/Backend/bloodbankuserpage.html");
   exit;
 }
 
@@ -32,9 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             echo "login successful";
             session_start();
             $_SESSION["username"] = $row['name'];
+            $_SESSION["role"] = "bank";
             $_SESSION["loggedin"] = true;
 
-            header("location: http://localhost/Bloodbank/Backend/welcomeuser.php");
+            header("location: http://localhost/Bloodbank/Backend/bloodbankuserpage.html");
           } else {
             echo "<script>alert('Invalid username or password, try again')</script>";
           }

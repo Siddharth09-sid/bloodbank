@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         session_start();
                         $_SESSION["name"] = $row['name'];
                         $_SESSION["loggedin"] = true;
+                        $_SESSION["role"] = "admin";
 
                         header("location: http://localhost/Bloodbank/loginsucessful.html");
                     } else {

@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         echo "login successful";
                         session_start();
                         $_SESSION["username"] = $row['name'];
+                        $_SESSION["phone"] = $row['phone'];
                         $_SESSION["loggedin"] = true;
 
                         header("location: http://localhost/Bloodbank/Backend/userpage.html");
