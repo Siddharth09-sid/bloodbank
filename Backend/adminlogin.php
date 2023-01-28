@@ -1,9 +1,10 @@
 <?php
+session_start();
 //This script will handle login
 
 // check if the user is already logged in
 if (isset($_SESSION['username'])) {
-    header("location: http://localhost/Bloodbank/adminuser.php");
+    header("location: http://localhost/Bloodbank/Backend/adminuser.php");
     exit;
 }
 
@@ -35,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         $_SESSION["loggedin"] = true;
                         $_SESSION["role"] = "admin";
 
-                        header("location: http://localhost/Bloodbank/adminuser.php");
+                        header("location: http://localhost/Bloodbank/Backend/adminuser.php");
                     } else {
                         echo "<script>alert('Invalid username or password, try again')</script>";
                     }
@@ -123,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
 
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="../Backend/login.php" class="text-sm font-semibold leading-6 text-gray-900">User Log in <span aria-hidden="true">&rarr;</span></a>
+                    <a href="../login.php" class="text-sm font-semibold leading-6 text-gray-900">User Log in <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </nav>
             <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -137,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             <a href="#" class="font-medium text-red-600 hover:text-red-500">Donate your Blood Today</a>
                         </p>
                     </div>
-                    <form class="mt-8 space-y-6" action="adminlogin.php" method="POST" onsubmit="">
+                    <form class="mt-8 space-y-6" action="adminpage.php" method="POST" onsubmit="">
                         <input type="hidden" name="remember" value="true">
                         <div class="-space-y-px rounded-md shadow-sm">
                             <div>

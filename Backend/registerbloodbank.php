@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if (
     !isset($_SESSION["loggedin"]) ||
     !$_SESSION["loggedin"] ||
@@ -90,7 +90,7 @@ if ($insert) {
                             <h1 class="text-xl font-bold leading-tight tracking-tight text-red-700 md:text-2xl dark:text-white">
                                 Fill the details
                             </h1>
-                            <form class="space-y-4 md:space-y-6" action="./Backend/registerbloodbank.php" method="POST">
+                            <form class="space-y-4 md:space-y-6" action="./registerbloodbank.php" method="POST">
                                 <div>
                                     <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name of
                                         Hospital</label>

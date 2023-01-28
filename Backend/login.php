@@ -1,6 +1,6 @@
 <?php
 //This script will handle login
-
+session_start();
 // check if the user is already logged in
 if (isset($_SESSION['phone'])) {
     header("location: http://localhost/Bloodbank/Backend/userpage.php");
@@ -124,14 +124,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
 
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="../Backend/adminlogin.php" class="text-sm font-semibold leading-6 text-gray-900">Admin Log in <span aria-hidden="true">&rarr;</span></a>
+                    <a href="./adminlogin.php" class="text-sm font-semibold leading-6 text-gray-900">Admin Log in <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </nav>
 
             <div class="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                 <div class="w-full max-w-md space-y-8">
                     <div>
-                        <a href="../index.php"><img class="mx-auto h-12 w-auto" src="../Photos/health-care.png" alt="logo"></a>
+                        <a href="./index.php"><img class="mx-auto h-12 w-auto" src="../Photos/health-care.png" alt="logo"></a>
                         <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign in to your
                             account
                         </h2>

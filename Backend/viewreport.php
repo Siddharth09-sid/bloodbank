@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if (
     !isset($_SESSION["loggedin"]) ||
     !$_SESSION["loggedin"] ||
@@ -28,22 +28,29 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $pdf->SetFont('Arial', 'B', 18);
 
     // Prints a cell with given text 
-    $pdf->Cell(60, 20, 'Your Blood Report');
+    $line = 0;
+    $pdf->Cell(200, 20, 'Your Blood Donation Certificate');
+    $pdf->Ln();
 
-    $pdf->Cell(60, 40, 'Blood Bank');
-    $pdf->Cell(100, 40, $bloodbank);
+    $pdf->Cell(60, 20, 'Blood Bank');
+    $pdf->Cell(100, 20, $bloodbank);
+    $pdf->Ln();
 
-    $pdf->Cell(60, 50, 'Name');
-    $pdf->Cell(100, 50, $name);
+    $pdf->Cell(60, 20, 'Name');
+    $pdf->Cell(100, 20, $name);
+    $pdf->Ln();
 
-    $pdf->Cell(60, 60, 'Time');
-    $pdf->Cell(100, 60, $time);
+    $pdf->Cell(60, 20, 'Time');
+    $pdf->Cell(100, 20, $time);
+    $pdf->Ln();
 
-    $pdf->Cell(60, 70, 'place');
-    $pdf->Cell(100, 70, $place);
+    $pdf->Cell(60, 20, 'place');
+    $pdf->Cell(100, 20, $place);
+    $pdf->Ln();
 
-    $pdf->Cell(60, 80, 'aadhar');
-    $pdf->Cell(100, 80, $aadhar);
+    $pdf->Cell(60, 20, 'aadhar');
+    $pdf->Cell(100, 20, $aadhar);
+    $pdf->Ln();
 
     // return the generated output
     $pdf->Output();

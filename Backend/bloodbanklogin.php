@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         </div>
 
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="../Backend/login.php" class="text-sm font-semibold leading-6 text-gray-900">User Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="./login.php" class="text-sm font-semibold leading-6 text-gray-900">User Log in <span aria-hidden="true">&rarr;</span></a>
         </div>
       </nav>
       <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">

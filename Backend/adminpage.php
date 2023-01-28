@@ -55,7 +55,7 @@
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900">View Report(s)</a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="./Backend/logout.php" class="text-sm font-semibold leading-6 text-gray-900">Log out <span aria-hidden="true">&rarr;</span></a>
+                    <a href="./logout.php" class="text-sm font-semibold leading-6 text-gray-900">Log out <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </nav>
             <!-- Mobile menu, show/hide based on menu open state. -->
@@ -110,7 +110,7 @@
                         <p class="mt-6 text-lg leading-8 text-gray-600">Pledge to make an impact this year. Donate Blood
                         </p>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
-                            <a href="./Backend/login.php" class="rounded-md bg-red-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Donate
+                            <a href="./login.php" class="rounded-md bg-red-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Donate
                                 Blood</a>
                             <a href="#" class="text-base font-semibold leading-7 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
                         </div>
