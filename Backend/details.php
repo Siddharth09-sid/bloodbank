@@ -18,3 +18,6 @@ if ($insert) {
                     alert("Registration unsuccessfull!");
                 </script>';
 }
+
+header("location: http://localhost/Bloodbank/Backend/bloodbankuserpage.html");
+exit;

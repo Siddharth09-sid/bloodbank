@@ -3,7 +3,7 @@
 
 // check if the user is already logged in
 if (isset($_SESSION['username'])) {
-    header("location: http://localhost/Bloodbank/loginsucessful.html");
+    header("location: http://localhost/Bloodbank/adminuser.html");
     exit;
 }
 
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         $_SESSION["loggedin"] = true;
                         $_SESSION["role"] = "admin";
 
-                        header("location: http://localhost/Bloodbank/loginsucessful.html");
+                        header("location: http://localhost/Bloodbank/adminuser.html");
                     } else {
                         echo "<script>alert('Invalid username or password, try again')</script>";
                     }

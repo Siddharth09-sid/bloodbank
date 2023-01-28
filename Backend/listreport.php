@@ -1,9 +1,16 @@
 <?php
 
+echo "<script>
+alert(\"test\");
+console.log(" . $_SESSION["loggedin"] . ")    
+console.log(" . $_SESSION["aadhar"] . ")    
+</script>";
+exit;
+
 if (
     !isset($_SESSION["loggedin"]) ||
     !$_SESSION["loggedin"] ||
-    !$_SESSION["aadhar"]
+    !isset($_SESSION["aadhar"])
 ) {
     echo '<script>alert("User not Authorized");</script>';
     header("location: http://localhost/Bloodbank/Backend/userpage.html");
